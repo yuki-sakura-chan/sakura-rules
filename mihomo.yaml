@@ -248,8 +248,8 @@ rules:
   - RULE-SET,EasyPrivacy,REJECT
   - RULE-SET,ProgramAD,REJECT
   - RULE-SET,ChatGPTProxy,🤖 ChatGPT
-  - RULE-SET,SteamDownloadProxy,🎮️⬇️ 游戏下载
   - RULE-SET,SteamProxy,🎮️ 游戏平台
+  - RULE-SET,SteamDownloadProxy,🎮️⬇️ 游戏下载
   - RULE-SET,AppleGlobal,🍎 苹果服务
   - RULE-SET,Telegramcidr,📲 电报信息
   - RULE-SET,DefaultProxy,🚀 手动切换
