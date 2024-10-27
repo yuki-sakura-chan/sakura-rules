@@ -1,9 +1,8 @@
 payload:
-  - 'chatgpt.com'
+  - '+.chatgpt.com'
   - 'chatgpt.livekit.cloud'
-  - 'openai.com'
+  - '+.openai.com'
   - 'chat.openai.com.cdn.cloudflare.net'
   - 'openai-api.arkoselabs.com'
   - 'openaicomproductionae4b.blob.core.windows.net'
   - 'production-openaicom-storage.azureedge.net'
-  - 'openaicom-api'
