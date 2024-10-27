@@ -230,7 +230,7 @@ rule-providers:
   ChatGPTProxy:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rule/main/rules_providers/Steam.yaml"
+    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rule/main/rules_providers/ChatGPT.yaml"
     path: ./rules_providers/ChatGPT.yaml
     interval: 86400
 
