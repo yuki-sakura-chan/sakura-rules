@@ -52,8 +52,6 @@ proxy-groups:
     type: select
     use: 
       - provider1
-    proxies:
-      - DIRECT
     filter: "(?i)台|tw|taiwan"
     interval: 300
 
@@ -61,8 +59,6 @@ proxy-groups:
     type: select
     use: 
       - provider1
-    proxies:
-      - DIRECT
     filter: "(?i)日|jp|japan"
     interval: 300
 
@@ -70,8 +66,6 @@ proxy-groups:
     type: select
     use: 
       - provider1
-    proxies:
-      - DIRECT
     filter: "(?i)港|hk|hongkong|hong kong"
     interval: 300
 
@@ -79,8 +73,6 @@ proxy-groups:
     type: select
     use: 
       - provider1
-    proxies:
-      - DIRECT
     filter: "(?i)美|us|usa|united states|america"
     interval: 300
 
@@ -88,8 +80,6 @@ proxy-groups:
     type: select
     use: 
       - provider1
-    proxies:
-      - DIRECT
     filter: "(?i)新|sg|singapore"
     interval: 300
 
