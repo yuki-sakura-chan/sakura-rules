@@ -31,5 +31,5 @@ payload:
   - "steamvideo-a.akamaihd.net"
   - "steamusercontent.com"
   - "wmsjsteam.com" 
-  - "steamserver.net"
+  - "+.steamserver.net"
   - "cdn.fastly.steamstatic.com"
