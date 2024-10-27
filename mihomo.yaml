@@ -95,15 +95,11 @@ proxy-groups:
 
   - name: "🍎 苹果服务"
     type: select
-    use: 
-      - provider1
     <<: *p
     interval: 300
   
   - name: "📲 电报信息"
     type: select
-    use: 
-      - provider1
     <<: *p
     interval: 300
 
