@@ -227,6 +227,13 @@ rule-providers:
     path: ./rules_providers/Steam.yaml
     interval: 86400
 
+  SteamDownloadProxy:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rule/main/rules_providers/SteamDownload.yaml"
+    path: ./rules_providers/SteamDownload.yaml
+    interval: 86400
+
   ChatGPTProxy:
     type: http
     behavior: domain
@@ -241,6 +248,7 @@ rules:
   - RULE-SET,EasyPrivacy,REJECT
   - RULE-SET,ProgramAD,REJECT
   - RULE-SET,ChatGPTProxy,🤖 ChatGPT
+  - RULE-SET,SteamDownloadProxy,🎮️⬇️ 游戏下载
   - RULE-SET,SteamProxy,🎮️ 游戏平台
   - RULE-SET,AppleGlobal,🍎 苹果服务
   - RULE-SET,Telegramcidr,📲 电报信息

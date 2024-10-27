@@ -32,4 +32,4 @@ payload:
   - "steamusercontent.com"
   - "wmsjsteam.com" 
   - "steamserver.net"
-  
+  - "cdn.fastly.steamstatic.com"
