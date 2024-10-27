@@ -93,6 +93,21 @@ proxy-groups:
     filter: "(?i)新|sg|singapore"
     interval: 300
 
+  - name: "🎮️ 游戏平台"
+    type: select
+    <<: *p
+    interval: 300
+
+  - name: "🎮️⬇️ 游戏下载"
+    type: select
+    <<: *p
+    interval: 300
+
+  - name: "🤖 ChatGPT"
+    type: select
+    <<: *p
+    interval: 300
+
   - name: "🍎 苹果服务"
     type: select
     <<: *p
@@ -103,109 +118,137 @@ proxy-groups:
     <<: *p
     interval: 300
 
+  - name: "🐟 漏网之鱼"
+    type: select
+    <<: *p
+    interval: 300
+
+  - name: "直连"
+    type: select
+    <<: *p
+    interval: 300
+
 rule-providers:
   AD:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/AD.yaml"
-    path: ./rules/AD.yaml
+    path: ./rules_providers/AD.yaml
     interval: 86400
     
   EasyList:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyList.yaml"
-    path: ./rules/EasyList.yaml
+    path: ./rules_providers/EasyList.yaml
     interval: 86400
     
   EasyListChina:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyListChina.yaml"
-    path: ./rules/EasyListChina.yaml
+    path: ./rules_providers/EasyListChina.yaml
     interval: 86400
 
   EasyPrivacy:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyPrivacy.yaml"
-    path: ./rules/EasyPrivacy.yaml
+    path: ./rules_providers/EasyPrivacy.yaml
     interval: 86400
 
   ProgramAD:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
-    path: ./rules/ProgramAD.yaml
+    path: ./rules_providers/ProgramAD.yaml
     interval: 86400
 
   ChinaIp:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
-    path: ./rules/ChinaIp.yaml
+    path: ./rules_providers/ChinaIp.yaml
     interval: 86400
   
   AppleChina:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt"
-    path: ./rules/AppleChina.yaml
+    path: ./rules_providers/AppleChina.yaml
     interval: 86400
   
   AppleGlobal:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt"
-    path: ./rules/AppleGlobal.yaml
+    path: ./rules_providers/AppleGlobal.yaml
     interval: 86400
   
   Lancidr:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
-    path: ./rules/Lancidr.yaml
+    path: ./rules_providers/Lancidr.yaml
     interval: 86400
   
   ChinaApp:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
-    path: ./rules/ChinaApp.yaml
+    path: ./rules_providers/ChinaApp.yaml
     interval: 86400
 
   Telegramcidr:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
-    pah: ./rules/Telegramcidr.yaml
+    pah: ./rules_providers/Telegramcidr.yaml
     interval: 86400
 
   DefaultProxy:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
-    path: ./rules/DefaultProxy.yaml
+    path: ./rules_providers/DefaultProxy.yaml
     interval: 86400
 
   DefaultDirect:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
-    path: ./rules/DefaultDirect.yaml
+    path: ./rules_providers/DefaultDirect.yaml
     interval: 86400
-  
+
+  SteamProxy:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rule/main/rules_providers/Steam.yaml"
+    path: ./rules_providers/Steam.yaml
+    interval: 86400
+
+  ChatGPTProxy:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rule/main/rules_providers/Steam.yaml"
+    path: ./rules_providers/ChatGPT.yaml
+    interval: 86400
+
 rules:
   - RULE-SET,AD,REJECT
   - RULE-SET,EasyList,REJECT
   - RULE-SET,EasyListChina,REJECT
   - RULE-SET,EasyPrivacy,REJECT
   - RULE-SET,ProgramAD,REJECT
+  - RULE-SET,ChatGPTProxy,🤖 ChatGPT
+  - RULE-SET,SteamProxy,🎮️ 游戏平台
   - RULE-SET,AppleGlobal,🍎 苹果服务
   - RULE-SET,Telegramcidr,📲 电报信息
   - RULE-SET,DefaultProxy,🚀 手动切换
-  - RULE-SET,ChinaIp,DIRECT
-  - RULE-SET,AppleChina,DIRECT
-  - RULE-SET,Lancidr,DIRECT
-  - RULE-SET,ChinaApp,DIRECT
-  - RULE-SET,DefaultDirect,DIRECT
+  - RULE-SET,ChinaIp,直连,no-resolve
+  - RULE-SET,AppleChina,直连
+  - RULE-SET,Lancidr,直连
+  - RULE-SET,ChinaApp,直连
+  - RULE-SET,DefaultDirect,直连
+  - GEOIP,CN,直连,no-resolve
+  - MATCH,🐟 漏网之鱼
