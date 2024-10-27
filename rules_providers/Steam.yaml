@@ -19,10 +19,8 @@ payload:
   - "steamdeck.com"
   - "steamgames.com"
   - "steampipe.akamaized.net"
-  - "+.steampowered.com"
   - "steampowered.com.8686c.com"
   - "steamstat.us"
-  - "+.steamstatic.com"
   - "steamstatic.com.8686c.com"
   - "steamstore-a.akamaihd.net"
   - "steamunlocked.net"
@@ -32,3 +30,7 @@ payload:
   - "steamusercontent.com"
   - "wmsjsteam.com" 
   - "+.steamserver.net"
+  - "+.steamstatic.com"
+  - "+.steampowered.com"
+
+
