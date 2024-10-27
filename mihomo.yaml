@@ -223,21 +223,21 @@ rule-providers:
   SteamProxy:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rule/main/rules_providers/Steam.yaml"
+    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rules/main/rules_providers/Steam.yaml"
     path: ./rules_providers/Steam.yaml
     interval: 86400
 
   SteamDownloadProxy:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rule/main/rules_providers/SteamDownload.yaml"
+    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rules/main/rules_providers/SteamDownload.yaml"
     path: ./rules_providers/SteamDownload.yaml
     interval: 86400
 
   ChatGPTProxy:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rule/main/rules_providers/ChatGPT.yaml"
+    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rules/main/rules_providers/ChatGPT.yaml"
     path: ./rules_providers/ChatGPT.yaml
     interval: 86400
 
