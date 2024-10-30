@@ -9,6 +9,7 @@ p: &p
     - 🇭🇰 香港
     - 🇺🇸 美国
     - 🇸🇬 新加坡
+    - REJECT
 
 proxy-providers:
   provider1:
@@ -119,6 +120,11 @@ proxy-groups:
     interval: 300
 
   - name: "直连"
+    type: select
+    <<: *p
+    interval: 300
+  
+  - name: "广告"
     type: select
     <<: *p
     interval: 300
@@ -251,11 +257,11 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,AD,REJECT
-  - RULE-SET,EasyList,REJECT
-  - RULE-SET,EasyListChina,REJECT
-  - RULE-SET,EasyPrivacy,REJECT
-  - RULE-SET,ProgramAD,REJECT
+  - RULE-SET,AD,广告
+  - RULE-SET,EasyList,广告
+  - RULE-SET,EasyListChina,广告
+  - RULE-SET,EasyPrivacy,广告
+  - RULE-SET,ProgramAD,广告
   - RULE-SET,TikTokProxy,TikTok
   - RULE-SET,ChatGPTProxy,🤖 ChatGPT
   - RULE-SET,SteamProxy,🎮️ 游戏平台
