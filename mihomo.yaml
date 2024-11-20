@@ -261,13 +261,20 @@ rule-providers:
     path: ./rules_providers/TikTok.yaml
     interval: 86400
 
+  DevelopProxy:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/yuki-sakura-chan/sakura-rules/main/rules_providers/Develop.yaml"
+    path: ./rules_providers/Develop.yaml
+    interval: 86400
+
 rules:
   - RULE-SET,AD,广告
   - RULE-SET,EasyList,广告
   - RULE-SET,EasyListChina,广告
   - RULE-SET,EasyPrivacy,广告
   - RULE-SET,ProgramAD,广告
-  - RULE-SET,Develop,开发环境
+  - RULE-SET,DevelopProxy,开发环境
   - RULE-SET,TikTokProxy,TikTok
   - RULE-SET,ChatGPTProxy,🤖 ChatGPT
   - RULE-SET,SteamProxy,🎮️ 游戏平台
