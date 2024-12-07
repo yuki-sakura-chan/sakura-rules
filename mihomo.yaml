@@ -9,6 +9,7 @@ p: &p
     - 🇭🇰 香港
     - 🇺🇸 美国
     - 🇸🇬 新加坡
+    - 🌏 其他地区
     - REJECT
 
 proxy-providers:
@@ -48,6 +49,7 @@ proxy-groups:
       - 🇭🇰 香港
       - 🇺🇸 美国
       - 🇸🇬 新加坡
+      - 🌏 其他地区
 
   - name: "🇹🇼 台湾"
     type: select
