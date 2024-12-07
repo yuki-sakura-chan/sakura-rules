@@ -83,6 +83,13 @@ proxy-groups:
       - provider1
     filter: "(?i)新|sg|singapore"
     interval: 300
+  
+  - name: "🌏 其他地区"
+    type: select
+    use: 
+      - provider1
+    filter: "^(?!.*(?i)(台|tw|taiwan|日|jp|japan|港|hk|hongkong|hong kong|美|us|usa|united states|america|新|sg|singapore)).*$"
+    interval: 300
 
   - name: "🎮️ 游戏平台"
     type: select
