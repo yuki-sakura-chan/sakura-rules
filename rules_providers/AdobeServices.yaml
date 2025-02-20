@@ -2,3 +2,4 @@ payload:
   - "+.adobe.com"
   - DOMAIN-KEYWORD,adobe
   - PROCESS-NAME,Adobe Premiere Pro.exe
+  - PROCESS-PATH,c:\Program Files (x86)\Common Files\Adobe\Adobe Desktop Common\IPCBox\AdobeIPCBroker.exe
