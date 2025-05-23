@@ -304,6 +304,11 @@ rules:
   - RULE-SET,ProgramAD,广告
   - RULE-SET,AdobeServices,Adobe 服务
   - RULE-SET,CNProxy,直连
+  - RULE-SET,ChinaIp,直连,no-resolve
+  - RULE-SET,AppleChina,直连
+  - RULE-SET,Lancidr,直连
+  - RULE-SET,ChinaApp,直连
+  - RULE-SET,DefaultDirect,直连
   - RULE-SET,DevelopProxy,开发环境
   - RULE-SET,TikTokProxy,TikTok
   - RULE-SET,ChatGPTProxy,🤖 ChatGPT
@@ -313,10 +318,6 @@ rules:
   - RULE-SET,AppleGlobal,🍎 苹果服务
   - RULE-SET,Telegramcidr,📲 电报信息
   - RULE-SET,DefaultProxy,🚀 手动切换
-  - RULE-SET,ChinaIp,直连,no-resolve
-  - RULE-SET,AppleChina,直连
-  - RULE-SET,Lancidr,直连
-  - RULE-SET,ChinaApp,直连
-  - RULE-SET,DefaultDirect,直连
   - GEOIP,CN,直连,no-resolve
   - MATCH,🐟 漏网之鱼
+  
